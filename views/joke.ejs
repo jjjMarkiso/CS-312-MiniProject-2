@@ -5,10 +5,14 @@
         <title>Your Joke</title>
         <link rel="stylesheet" href="/style.css">
     </head>
-    
+<!-- The main body of /joke, this pulls in the argument of name given by the user as well as the generated joke-->
     <body>
         <h1>Heres your joke, <%= name %>!</h1>
         <p><%= joke %></p>
         <a href="/">Get Another Joke</a>
+
+        <% if (image) { %>
+            <img src="<%= image %>" alt="Joke image" class="joke-image">
+        <% } %>
     </body>
 </html>
